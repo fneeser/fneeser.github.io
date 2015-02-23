@@ -319,6 +319,9 @@ a.sidebar-nav-item:focus {
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: .75em; /* 12px */
 }
 
 /* Related posts */
@@ -526,6 +529,31 @@ a.pagination-item:hover {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+/* Custom 1: Dark Blue */
+.theme-custom-1 .sidebar,
+.theme-custom-1 .sidebar-toggle:active,
+.theme-custom-1 #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #3a8bd6;
+}
+.theme-custom-1 .container a,
+.theme-custom-1 .sidebar-toggle,
+.theme-custom-1 .related-posts li a:hover {
+  color: #3a8bd6;
+}
+
+/* Custom 2: Light Blue for background, Darker Blue for text */
+.theme-custom-2 .sidebar,
+.theme-custom-2 .sidebar-toggle:active,
+.theme-custom-2 #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #83b6e6;
+}
+.theme-custom-2 .container a,
+.theme-custom-2 .sidebar-toggle,
+.theme-custom-2 .related-posts li a:hover {
+  color: #3a8bd6;
+}
+
 
 
 /*

@@ -3,7 +3,8 @@
 
   {% include head.html %}
 
-  <body>
+  <!-- Select a Lanyon or custom color scheme -->
+  <body class="theme-custom-2">
 
     {% include sidebar.html %}
 
@@ -21,6 +22,7 @@
 
       <div class="container content">
         {{ content }}
+        {% include comments.html %}
       </div>
     </div>
 

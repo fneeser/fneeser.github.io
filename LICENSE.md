@@ -1,4 +1,14 @@
-# Released under MIT License
+# Blog content
+
+Copyright (c) 2015 Fredy Neeser.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">SDN/OpenStack Blog</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://blog.systemathic.ch" property="cc:attributionName" rel="cc:attributionURL">Fredy Neeser</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />Layout based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/poole/lanyon" rel="dct:source">https://github.com/poole/lanyon</a>.
+
+
+# Lanyon Web infrastructure released under MIT License
 
 Copyright (c) 2014 Mark Otto.
 

@@ -5,6 +5,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
+    <p><img src="{{ BASE_PATH }}/public/img/router-arrows.svg" width="128" height="128" /></p>  
     <p>{{ site.description }}</p>
   </div>
 
@@ -25,10 +26,22 @@
       {% endif %}
     {% endfor %}
 
+    <!--
     <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
     <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
     <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+    -->
   </nav>
+  
+  <!-- See http://fontawesome.io/get-started/ for CSS icon support (classes "fa..." below) -->
+  
+  <div class="sidebar-item">
+    <p>
+      <a href="https://github.com/{{ site.author.github }}"><i class="fa fa-github fa-3x"></i></a>
+      <a href="https://twitter.com/{{ site.author.twitter }}"><i class="fa fa-twitter fa-3x"></i></a>
+      <a href="https://www.linkedin.com/in/fneeser"><i class="fa fa-linkedin-square fa-3x"></i></a>
+    </p>
+  </div>
 
   <div class="sidebar-item">
     <p>

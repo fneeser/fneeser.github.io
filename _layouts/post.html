@@ -4,17 +4,30 @@ layout: default
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
+  <span class="post-date">{{ page.date | date: "%-d %B %Y" }}</span>
   {{ content }}
+  <span class="post-date">Tags:
+    {% assign page_tags = page.tags | sort %}
+    {% include page_tags_list %}
+  </span>
+  {% if page.previous %}
+    <span class="post-date">
+    &larr; Previous Post: <a href="{{ page.previous.url }}">{{ page.previous.title }}</a></span>
+  {% endif %}
+  {% if page.next %}
+    <span class="post-date">
+    Next Post: <a href="{{ page.next.url }}">{{ page.next.title }}</a> &rarr;</span>
+  {% endif %}
+  
 </div>
 
 <div class="related">
-  <h2>Related Posts</h2>
+  <h2>Recent Posts</h2>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
       <li>
         <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
+          <a href="{{ BASE_PATH }}{{ post.url }}">
             {{ post.title }}
             <small>{{ post.date | date_to_string }}</small>
           </a>
@@ -23,3 +36,10 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+</a>
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">SDN/OpenStack Blog</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://blog.systemathic.ch" property="cc:attributionName" rel="cc:attributionURL">Fredy Neeser</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />Layout based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/poole/lanyon" rel="dct:source">https://github.com/poole/lanyon</a>.
+
+<p>

@@ -1,0 +1,16 @@
+<div class="image-wrapper">
+    <!-- First inner div for image can have a width < 100% and is centered -->
+    <div style="width: {{ include.width }}; margin: 0 auto;">
+        {% if include.url %}
+        <a href="{{ include.url }}" title="{{ include.title }}" target="_blank">
+        {% endif %}
+            <img src="{{ BASE_PATH }}/{{ include.img }}" alt="{{ include.title }}"/>
+        {% if include.url %}
+        </a>
+        {% endif %}
+    </div>
+    <!-- Second inner div for caption -->
+    {% if include.caption %}
+    <div class="image-caption">{{ include.caption }}</div>
+    {% endif %}
+</div>

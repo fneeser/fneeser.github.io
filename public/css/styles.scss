@@ -1,0 +1,24 @@
+---
+---
+
+// start content
+
+.image-wrapper {
+  // max-width 100% should protect against cropping
+  max-width: 100%;
+  
+  // Following 2 lines have no effect
+  //margin-left: auto;
+  //margin-right: auto;
+  
+  // Following line centers the caption, but not the image  
+  text-align: center;
+
+  .image-caption {
+    color: grey;
+    //font-style: italic;
+    
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+}

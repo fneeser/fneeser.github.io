@@ -3,24 +3,66 @@ markdown:            redcarpet
 highlighter:         pygments
 
 # Permalinks
+#   http://jekyllrb.com/docs/permalinks/
 #
+# Scott Lowe uses `permalink:    /:year/:month/:day/:title/`, which improves
+#   the way permalinks are formed -- see the links to posts found via
+#   sidebar -> Post Categories  and  sidebar -> Content Tags.
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+#
+#permalink:           pretty
+permalink:           /:year/:month/:day/:title/
 relative_permalinks: true
 
 # Setup
-title:               Lanyon
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://lanyon.getpoole.com
+title:               Fredy's SDN/OpenStack Blog
+tagline:             'Network performance in the SDN age'
+description:         'Selected topics on network architecture and performance.'
+
+# On a formatted post, the variable site.url affected the links in the
+# "Recent Posts" footer, but not the the link next to "Previous Post"
+# right under the post's text.
+# This was the case when I tested offline with 'jekyll serve'.
+# I think during offline testing, the links in the footer should
+# also refer to http://localhost:4000/ as the url.
+# Hmm, actually this was a bug in Scott's _layouts/post.html,
+# which should use
+#             {{ BASE_PATH }}{{ post.url }}
+# rather than
+#             {{ site.url }}{{ post.url }}
+#
+# to form the href.
+#
+# The use of BASE_PATH is documented at
+#   http://jekyllbootstrap.com/usage/blog-configuration.html :
+# 
+# - BASE_PATH can apparently be set in _config.yml
+#   (what if the definition is missing?)
+# - When in localhost, your site will run from root "/"
+#   regardless of BASE_PATH.         
+#
+
+url:                 http://blog.systemathic.ch
+#url:                 http://fneeser.github.io/
 baseurl:             /
-paginate:            5
+paginate:            10
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Fredy Neeser
+  email:             Fredy.Neeser@solnet.ch
+  github:            fneeser
+  twitter:           fredy_neeser
 
 # Custom vars
-version:             1.0.0
+#version:             1.0.0
+
+# Configs below from scott lowe
+
+# Exclude Ruby gem stuff
+exclude:             ["vendor"]
+
+# Gems
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
