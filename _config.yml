@@ -1,6 +1,12 @@
 # Dependencies
-markdown:            redcarpet
-highlighter:         pygments
+
+# FN, 23. May 2016: github-pages switched from markdown to kramdown
+# for Jekyll 3.x, so remove following line:
+#markdown:            redcarpet
+
+# FN, 23. May 2016: pygments is not installed, let's remove this for now:
+#highlighter:         pygments
+
 
 # Permalinks
 #   http://jekyllrb.com/docs/permalinks/
@@ -12,7 +18,10 @@ highlighter:         pygments
 #
 #permalink:           pretty
 permalink:           /:year/:month/:day/:title/
-relative_permalinks: true
+
+# FN, 23. May 2016: Following http://jekyllrb.com/docs/upgrading/2-to-3/
+# remove following line to upgrade from Jekyll 2.x to 3.x:
+#relative_permalinks: true
 
 # Setup
 title:               Fredy's SDN/OpenStack Blog
@@ -35,11 +44,11 @@ description:         'Selected topics on network architecture and performance.'
 #
 # The use of BASE_PATH is documented at
 #   http://jekyllbootstrap.com/usage/blog-configuration.html :
-# 
+#
 # - BASE_PATH can apparently be set in _config.yml
 #   (what if the definition is missing?)
 # - When in localhost, your site will run from root "/"
-#   regardless of BASE_PATH.         
+#   regardless of BASE_PATH.
 #
 
 url:                 http://blog.systemathic.ch
@@ -66,3 +75,4 @@ exclude:             ["vendor"]
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-paginate
